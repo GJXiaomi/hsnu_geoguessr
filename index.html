@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校園版 GeoGuessr</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+    <img id="photo-display" src="https://via.placeholder.com/1200x800?text=Press+Start+to+Play" alt="校園場景">
+
+    <div id="ui-overlay">
+        <h2 id="status">準備好了嗎？</h2>
+        <p>第 <span id="round">0</span> / 5 題</p>
+        <p>總分：<span id="score">0</span></p>
+        <button id="next-btn">開始遊戲</button>
+    </div>
+
+    <div id="map-container">
+        <img id="campus-map" src="your_map_image.jpg" alt="校園平面圖">
+        <div id="marker"></div>
+        <div id="correct-marker"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
