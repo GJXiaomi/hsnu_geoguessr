@@ -48,7 +48,7 @@ function startNewRound() {
     correctMarker.style.display = 'none';
     
     photoDisplay.src = questions[currentRound].img;
-    statusText.innerText = "這是在哪裡？點擊地圖選擇位置";
+    statusText.innerText = "這是哪裡？點擊地圖選擇位置";
     nextBtn.style.display = 'none';
     
     currentRound++;
@@ -81,6 +81,6 @@ function calculateScore(px, py) {
     statusText.innerText = `獲得 ${points} 分！`;
     
     nextBtn.style.display = 'block';
-    nextBtn.innerText = currentRound === 5 ? "看總分並重新開始" : "下一題";
+    nextBtn.innerText = currentRound === 5 ? "重新開始" : "下一題";
     hasGuessed = true;
 }
