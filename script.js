@@ -1,10 +1,10 @@
 // 1. 設定題目 (請替換圖片路徑與正確座標百分比)
 const questions = [
-    { img: 'p1.jpg', x: 45.5, y: 32.1 },
-    { img: 'p2.jpg', x: 60.2, y: 78.5 },
-    { img: 'p3.jpg', x: 22.8, y: 45.0 },
-    { img: 'p4.jpg', x: 88.1, y: 15.3 },
-    { img: 'p5.jpg', x: 50.0, y: 50.0 }
+    { img: '仙.jpg', x: 46.5, y: 91.7 },
+    { img: '操.jpg', x: 83.5, y: 50.3 },
+    { img: '體.jpg', x: 18.8, y: 76 },
+    { img: '網.jpg', x: 84.7, y: 73.4 },
+    { img: '演.jpg', x: 45.4, y: 17.3 }
 ];
 
 let currentRound = 0;
@@ -40,6 +40,8 @@ mapContainer.addEventListener('click', (e) => {
 
     showMarkers(clickX, clickY);
     calculateScore(clickX, clickY);
+
+    console.log(clickX,clickY)
 });
 
 function startNewRound() {
