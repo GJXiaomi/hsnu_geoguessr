@@ -32,16 +32,15 @@ nextBtn.addEventListener('click', () => {
 
 // 3. 地圖點擊事件
 mapContainer.addEventListener('click', (e) => {
-    if (hasGuessed || currentRound === 0) return;
-
-    const rect = mapContainer.getBoundingClientRect();
-    const clickX = ((e.clientX - rect.left) / rect.width) * 100;
-    const clickY = ((e.clientY - rect.top) / rect.height) * 100;
-
-    showMarkers(clickX, clickY);
-    calculateScore(clickX, clickY);
-
-    console.log(clickX,clickY)
+  if (hasGuessed || currentRound === 0) return;
+  const rect = mapContainer.getBoundingClientRect();
+  const scaleX = mapContainer.offsetWidth / rect.width;
+  const scaleY = mapContainer.offsetHeight / rect.height;
+  const clickX = (e.offsetX / mapContainer.clientWidth) * 100;
+const clickY = (e.offsetY / mapContainer.clientHeight) * 100;
+  // ( 或可以用 offsetX/offsetY，但只在沒有其他padding/transform時最好 )
+  showMarkers(clickX, clickY);
+  calculateScore(clickX, clickY);
 });
 
 function startNewRound() {

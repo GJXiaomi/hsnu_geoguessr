@@ -61,12 +61,12 @@ button:hover {
     cursor: crosshair;
     transition: transform 0.3s ease;
     background: #fff;
+    transform-origin: bottom right;
 }
 
 /* 滑鼠移入地圖放大 */
 #map-container:hover {
-    transform: scale(4);
-    transform-origin: bottom right;
+    transform: scale(3);
 }
 
 #campus-map {
@@ -77,16 +77,16 @@ button:hover {
 
 /* 座標點樣式 */
 #marker, #correct-marker {
-    position: absolute;
-    width: 2vw;
-    height: 2vw;
-    border-radius: 50%;
-    margin-left: -1vw;
-    margin-top: -1vw;
-    display: none;
-    pointer-events: none;
-    border: 2px solid white;
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: none;
+  pointer-events: none;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  border: 1px solid white;
 }
 
-#marker { background: #ff4757; z-index: 5; }      /* 玩家點的紅點 */
-#correct-marker { background: #2ed573; z-index: 4; } /* 正確位置綠點 */
+#marker { background: #ff4757; z-index: 0; }      /* 玩家點的紅點 */
+#correct-marker { background: #2ed573; z-index: 0; } /* 正確位置綠點 */
