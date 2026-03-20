@@ -78,11 +78,11 @@ button:hover {
 /* 座標點樣式 */
 #marker, #correct-marker {
     position: absolute;
-    width: 12px;
-    height: 12px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50%;
-    margin-left: -6px;
-    margin-top: -6px;
+    margin-left: -1vw;
+    margin-top: -1vw;
     display: none;
     pointer-events: none;
     border: 2px solid white;
